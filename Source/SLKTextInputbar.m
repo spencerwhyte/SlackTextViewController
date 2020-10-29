@@ -5,7 +5,7 @@
 //  Copyright 2014-2016 Slack Technologies, Inc.
 //  Licence: MIT-Licence
 //
-
+#if __has_include(<UIKit/UIKit.h>)
 #import "SLKTextInputbar.h"
 #import "SLKTextView.h"
 #import "SLKInputAccessoryView.h"
@@ -803,3 +803,4 @@ NSString * const SLKTextInputbarDidMoveNotification =   @"SLKTextInputbarDidMove
 }
 
 @end
+#endif

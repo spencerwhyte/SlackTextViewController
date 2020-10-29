@@ -5,7 +5,7 @@
 //  Copyright 2014-2016 Slack Technologies, Inc.
 //  Licence: MIT-Licence
 //
-
+#if __has_include(<UIKit/UIKit.h>)
 #import "UIResponder+SLKAdditions.h"
 
 static __weak id ___currentFirstResponder;
@@ -29,3 +29,4 @@ static __weak id ___currentFirstResponder;
 }
 
 @end
+#endif

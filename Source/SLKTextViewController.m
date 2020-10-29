@@ -5,7 +5,7 @@
 //  Copyright 2014-2016 Slack Technologies, Inc.
 //  Licence: MIT-Licence
 //
-
+#if __has_include(<UIKit/UIKit.h>)
 #import "SLKTextViewController.h"
 #import "SLKInputAccessoryView.h"
 
@@ -2446,3 +2446,4 @@ CGFloat const SLKAutoCompletionViewDefaultHeight = 140.0;
 }
 
 @end
+#endif

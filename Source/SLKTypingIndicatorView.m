@@ -5,7 +5,7 @@
 //  Copyright 2014-2016 Slack Technologies, Inc.
 //  Licence: MIT-Licence
 //
-
+#if __has_include(<UIKit/UIKit.h>)
 #import "SLKTypingIndicatorView.h"
 #import "UIView+SLKAdditions.h"
 #import "SLKUIConstants.h"
@@ -344,3 +344,4 @@
 }
 
 @end
+#endif

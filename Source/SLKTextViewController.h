@@ -5,7 +5,7 @@
 //  Copyright 2014-2016 Slack Technologies, Inc.
 //  Licence: MIT-Licence
 //
-
+#if __has_include(<UIKit/UIKit.h>)
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
@@ -624,3 +624,5 @@ NS_CLASS_AVAILABLE_IOS(7_0) @interface SLKTextViewController : UIViewController 
 @end
 
 NS_ASSUME_NONNULL_END
+
+#endif

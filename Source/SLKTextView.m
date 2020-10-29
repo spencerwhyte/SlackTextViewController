@@ -5,7 +5,7 @@
 //  Copyright 2014-2016 Slack Technologies, Inc.
 //  Licence: MIT-Licence
 //
-
+#if __has_include(<UIKit/UIKit.h>)
 #import "SLKTextView.h"
 #import "SLKTextView+SLKAdditions.h"
 
@@ -1144,3 +1144,4 @@ typedef void (^SLKKeyCommandHandler)(UIKeyCommand *keyCommand);
 }
 
 @end
+#endif

@@ -6,6 +6,7 @@
 //  Licence: MIT-Licence
 //
 
+#if __has_include(<UIKit/UIKit.h>)
 #import <UIKit/UIKit.h>
 
 /** @name UIResponder additional features used for SlackTextViewController. */
@@ -19,3 +20,4 @@
 + (nullable instancetype)slk_currentFirstResponder;
 
 @end
+#endif

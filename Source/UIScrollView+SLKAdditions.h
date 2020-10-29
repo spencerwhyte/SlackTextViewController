@@ -5,7 +5,7 @@
 //  Copyright 2014-2016 Slack Technologies, Inc.
 //  Licence: MIT-Licence
 //
-
+#if __has_include(<UIKit/UIKit.h>)
 #import <UIKit/UIKit.h>
 
 /** @name UIScrollView additional features used for SlackTextViewController. */
@@ -38,3 +38,4 @@
 - (void)slk_stopScrolling;
 
 @end
+#endif

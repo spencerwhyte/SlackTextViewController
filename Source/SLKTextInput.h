@@ -6,6 +6,7 @@
 //  Licence: MIT-Licence
 //
 
+#if __has_include(<UIKit/UIKit.h>)
 #import <UIKit/UIKit.h>
 
 /**
@@ -44,3 +45,4 @@
 - (NSString *)wordAtRange:(NSRange)range rangeInText:(NSRangePointer)rangePointer;
 
 @end
+#endif

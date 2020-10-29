@@ -6,6 +6,7 @@
 //  Licence: MIT-Licence
 //
 
+#if __has_include(<UIKit/UIKit.h>)
 #import <UIKit/UIKit.h>
 
 @interface SLKInputAccessoryView : UIView
@@ -14,3 +15,4 @@
 @property (nonatomic, weak, readonly) UIView *_Nullable keyboardViewProxy;
 
 @end
+#endif
