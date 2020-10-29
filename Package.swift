@@ -17,7 +17,6 @@ let package = Package(
     targets: [
         .target(
             name: "SlackTextViewController",
-            path: "Source",
-            publicHeadersPath: "Source")
+            path: "Source")
     ]
 )
