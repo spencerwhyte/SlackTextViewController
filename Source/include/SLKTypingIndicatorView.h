@@ -35,29 +35,7 @@ NS_ASSUME_NONNULL_BEGIN
 /** The inner padding to use when laying out content in the view. Default is {10, 40, 10, 10}. */
 @property (nonatomic, assign) UIEdgeInsets contentInset;
 
-/**
- Inserts a user name, only if that user name is not yet on the list.
- Each inserted name has an attached timer, which will automatically remove the name from the list once the interval is reached (default 6 seconds).
- 
- The control follows a set of display rules, to accomodate the screen size:
- 
- - When only 1 user name is set, it will display ":name is typing"
- 
- - When only 2 user names are set, it will display ":name & :name are typing"
- 
- - When more than 2 user names are set, it will display "several people are typing"
- 
- @param username The user name string.
- */
-- (void)insertUsername:(NSString *_Nullable)username;
-
-/**
- Removes a user name, if existent on the list.
- Once there are no more items on the list, the indicator will automatically try to hide (by setting it self to visible = NO).
- 
- @param username The user name string.
- */
-- (void)removeUsername:(NSString *_Nullable)username;
+- (void)updateText:(NSString *_Nullable)text;
 
 @end
 

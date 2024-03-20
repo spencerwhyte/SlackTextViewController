@@ -202,6 +202,12 @@
 
 #pragma mark - Public Methods
 
+-(void)updateText:(NSString *)text;
+{
+    self.textLabel.text = text
+    self.visible = self.textLabel.text != nil
+}
+
 - (void)insertUsername:(NSString *)username;
 {
     if (!username) {
