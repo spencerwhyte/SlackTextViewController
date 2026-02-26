@@ -201,10 +201,25 @@ CGFloat const SLKAutoCompletionViewDefaultHeight = 140.0;
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    
+
     [self.scrollViewProxy flashScrollIndicators];
-    
+
     self.viewVisible = YES;
+
+    // If the keyboard was dismissed while this view wasn't visible (e.g., during modal
+    // presentation), the keyboard notification handler would have returned early due to
+    // !isViewVisible, leaving keyboardHC.constant stale. Reset it here.
+    if (![self.textView isFirstResponder]) {
+        CGFloat bottomMargin = [self slk_appropriateBottomMargin];
+        if (self.keyboardHC.constant != bottomMargin) {
+            self.keyboardHC.constant = bottomMargin;
+            self.scrollViewHC.constant = [self slk_appropriateScrollViewHeight];
+            [self.view layoutIfNeeded];
+        }
+        if (_keyboardStatus != SLKKeyboardStatusDidHide) {
+            _keyboardStatus = SLKKeyboardStatusDidHide;
+        }
+    }
 }
 
 - (void)viewWillDisappear:(BOOL)animated
